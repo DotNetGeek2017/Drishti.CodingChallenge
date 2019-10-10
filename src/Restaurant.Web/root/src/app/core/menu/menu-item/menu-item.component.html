@@ -1,0 +1,6 @@
+<ng-template ngFor let-tile [ngForOf]="tiles">
+  <h4 class="tile-title" (click)="tile.isActive = !tile.isActive"><mat-icon class="right-align nav-icon" *ngIf="tile.menuItems">{{ tile.isActive ? 'keyboard_arrow_down' : 'keyboard_arrow_right' }}</mat-icon><a routerLink="/{{tile.href}}" routerLinkActive="router-link-active"  (click)="$event.stopPropagation()" *ngIf="tile.type == 'Link'">{{tile.text}}</a><span *ngIf="tile.type != 'Link'">{{tile.text}}</span></h4>
+  <div class="tile-submenu" *ngIf="tile.isActive && tile.menuItems">
+    <app-menu-item [tiles]="tile.menuItems"></app-menu-item>
+  </div>
+</ng-template>

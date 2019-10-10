@@ -1,0 +1,7 @@
+<div class="action-teasers-container">
+    <div class="action-teasers-details" fxLayout="column" fxLayoutGap="8px">
+            <div class="action-teaser-details-row" *ngFor="let action of actionTeasers" fxLayout="row">
+                <action-teaser-section [action]="action"></action-teaser-section>
+            </div>
+    </div>
+</div>

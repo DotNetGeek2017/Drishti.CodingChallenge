@@ -1,0 +1,55 @@
+@import "_variables";
+@import "_mixins";
+
+.action-filter-container {
+}
+
+.action-filter-overview {
+  background: white;
+  border-radius: 5px;
+  padding: 18px;
+}
+
+.mat-form-field-increase-width{
+  width:300px !important
+}
+
+.action-filter-details {
+  margin-bottom: 18px;
+}
+
+.action-filter-details-row {
+  background: $tesla-grey70;
+  border-radius: 5px;
+  padding: 16px;
+  cursor: pointer;
+
+  &-text {
+    display: flex;
+    align-items: center;
+  }
+
+  @include transition();
+
+  &:hover {
+    background: $tesla-grey50;
+  }
+}
+
+.error-headers {
+  padding: 16px 16px 8px 16px;
+}
+
+.errors {
+  max-width: 100%;
+  mat-icon {
+    cursor: initial;
+  }
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+}

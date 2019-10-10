@@ -1,0 +1,30 @@
+.action-teaser-container{
+    padding-top: 25px;
+    .circle {
+        padding: 5px 5px 5px 5px;
+        height: 50px;
+        width: 50px ;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        border:1px solid black; 
+        font-weight: bold;
+        font-size: large; 
+      }
+
+      #block_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .columncontainer{
+        padding: 4px;
+    }
+
+    .fa{
+        padding: 5px;
+    }
+}
+
+ 

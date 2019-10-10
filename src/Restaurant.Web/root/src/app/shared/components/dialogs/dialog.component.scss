@@ -1,0 +1,28 @@
+@import "_variables";
+
+.dialog-container {
+  min-width: 400px;
+  .dialog-title {
+    font-size: 1.7em;
+    text-align: center;
+    font-weight: 100;
+    margin: 0 0 10px;
+  }
+  .dialog-message {
+    margin: 25px auto;
+    min-height: 75px;
+  }
+}
+
+.dialog-alert {
+  .dialog-message {
+    color: $tesla-red;
+  }
+}
+
+.mat-dialog-actions {
+  justify-content: flex-end;
+  button:last-of-type {
+    margin-left: 10px;
+  }
+}

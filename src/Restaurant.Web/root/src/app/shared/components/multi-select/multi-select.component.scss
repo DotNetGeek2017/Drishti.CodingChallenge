@@ -1,0 +1,67 @@
+@import "variables";
+@import "mixins";
+
+.placeholder-number {
+  height: 34px;
+  padding: 0 12px;
+  cursor: pointer;
+  border: 1px solid $tesla-grey50;
+  border-radius: 20px;
+  span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+.multi-input-dropdown {
+  background: $tesla-white;
+  max-height: 400px;
+  overflow: auto;
+  top: 100%;
+  background: $tesla-white;
+  border-radius: 5px;
+  box-shadow: $tesla-grey40 2px 2px 2px 0px;
+  padding: 0;
+  width: 100%;
+  z-index: 10;
+  .multi-select-input {
+    padding: 8px;
+  }
+  .multi-input-button {
+    padding: 8px;
+    border-bottom: 1px solid $tesla-grey50;
+  }
+
+  .multi-input-list {
+    li {
+      width: 100%;
+      padding: 0 8px;
+      display: flex;
+      margin-bottom: 4px;
+      color: $tesla-black;
+      align-items: center;
+      background: $tesla-grey60;
+      justify-content: space-between;
+
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &:first-child {
+        margin-top: 8px;
+      }
+    }
+
+    mat-icon {
+      margin-left: 12px;
+      cursor: pointer;
+      transform: scale(0.8);
+      @include transition();
+
+      &:hover {
+        color: $tesla-black;
+      }
+    }
+  }
+}

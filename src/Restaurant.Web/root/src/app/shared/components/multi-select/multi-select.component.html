@@ -1,0 +1,26 @@
+<div #selectPanel class="placeholder-number" fxLayout="row" #overlayOrigin="cdkOverlayOrigin" cdkOverlayOrigin
+fxLayoutAlign="space-between center" (click)="selectPanel.checked = true" [matTooltip]="getDisplayText()">
+<span>{{getDisplayText()}}</span>
+<mat-icon>keyboard_arrow_down</mat-icon>
+</div>
+<div>
+<ng-template cdk-connected-overlay [cdkConnectedOverlayOrigin]="overlayOrigin"
+  [cdkConnectedOverlayHasBackdrop]="true" [cdkConnectedOverlayOpen]="selectPanel.checked"
+  (backdropClick)="selectPanel.checked = false" (detach)="selectPanel.checked = false">
+  <div class="multi-input-dropdown">
+    <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="start center" class="multi-select-input">
+      <input #number (keyup)="enterText($event, number)" [type]="inputType" >
+      <mat-icon class="add-icon" (click)="enterText(null, number)">add_circle_outline</mat-icon>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end end" class="multi-input-button">
+      <button mat-raised-button size="small" color="secondary"
+        (click)="clearValue()">Clear</button>
+    </div>
+    <ul class="multi-input-list">
+      <li *ngFor="let input of value; let i = index"><span>{{input}}</span>
+        <mat-icon (click)="deleteText(i)">close</mat-icon>
+      </li>
+    </ul>
+  </div>
+</ng-template>
+</div>

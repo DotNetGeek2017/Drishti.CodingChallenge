@@ -1,0 +1,17 @@
+@import "_variables";
+.charts-container {
+  .chart-container {
+    background: #fff;
+    border-radius: 5px;
+    max-height: 700px;
+    padding: 18px;
+    > div {
+      max-width: 500px;
+    }
+  }
+}
+
+.chart {
+  margin-top: 10px;
+  max-height: 700px;
+}

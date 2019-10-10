@@ -1,0 +1,16 @@
+<div fxLayout="column" class="name-info">
+    <h4 class="current-date">{{date | date}}</h4>
+    <h3>Welcome to coding challenge!</h3>
+</div>
+<div class="main-container" fxLayout="row" fxLayoutGap="18px">
+    <div fxLayout="column" fxLayoutGap="18px" fxFlex="40">
+        <left-chart-section [aggregatedData]="aggregatedData$"></left-chart-section>
+    </div>
+    <div fxLayout="column" fxLayoutGap="18px">
+        <search-filter-section [dishes]="dishes" [actions]="actions" [stations]="stations" (searchFilterChanged)="searchFilterChanged($event);"></search-filter-section>
+        <action-teasers-section  [actionTeasers]="(paginationResult$ | async)?.items"></action-teasers-section>
+        <pagination id="paginationComponent" name="paginationComponent" #paginationComponent  
+            [pageIndex]="(paginationResult$ | async)?.pageIndex" [pageSize]="(paginationResult$ | async)?.pageSize" 
+            [totalCount]="(paginationResult$ | async)?.totalCount"s></pagination>
+    </div>
+</div>

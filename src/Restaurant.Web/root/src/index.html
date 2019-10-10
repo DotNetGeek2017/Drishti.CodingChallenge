@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Anitha Restaurant</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+  .d-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 100000000;
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 1.0;
+      transition: all linear 300ms;
+      -webkit-transition: all linear 300ms;
+      -moz-transition: all linear 300ms;      
+  }
+
+  .d-loader-spinner {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 50vh;
+      left: 50vw;
+      margin-top: -30px;
+      margin-left: -30px;
+      -webkit-animation: pulsate 3s ease-out;
+      -webkit-animation-iteration-count: infinite;
+      opacity: 0;
+      background: url(https://drishti.com/wp-content/uploads/2018/04/favicon-300x300.png) 0 0 no-repeat;
+      background-size: 60px;
+  }
+
+  @-webkit-keyframes pulsate {
+      0% {
+          opacity: 0;
+      }
+
+      50% {
+          opacity: 1;
+      }
+
+      100% {
+          opacity: 0;
+      }
+  }
+</style>
+<body class="d-md"> 
+  <app-root>
+    <div class="d-loader">
+      <div class="d-loader-spinner"></div>
+    </div>
+  </app-root>
+</body>
+</html>

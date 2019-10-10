@@ -1,0 +1,40 @@
+<div class="action-filter-container">
+  <div class="action-filter-overview">
+    <div fxLayout="row" class="error-headers">
+      <div fxFlex="40">
+        <mat-form-field class="mat-form-field-increase-width">
+          <mat-label>Action</mat-label>
+          <mat-select [(ngModel)]="selectedAction" name="action">
+              <mat-option></mat-option>
+            <mat-option *ngFor="let action of actions" [value]="action">
+              {{action}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxFlex="40">
+        <mat-form-field class="mat-form-field-increase-width">
+          <mat-label>Dish</mat-label>
+          <mat-select [(ngModel)]="selectedDish" name="dish">
+              <mat-option></mat-option>
+            <mat-option *ngFor="let dish of dishes" [value]="dish">
+              {{dish}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxFlex="40">
+        <mat-form-field class="mat-form-field-increase-width">
+          <mat-label>Station</mat-label>
+          <mat-select  [(ngModel)]="selectedStation" name="station">
+            <mat-option></mat-option>
+            <mat-option *ngFor="let station of stations" [value]="station">
+              {{station}} 
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>    
+    <button mat-raised-button color="blue" size="large" (click)="handleClick()">Search</button>
+  </div>
+</div>

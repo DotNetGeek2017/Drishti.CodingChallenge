@@ -1,0 +1,9 @@
+.alert {
+    padding: 20px;
+    background: rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    outline: 0;
+}

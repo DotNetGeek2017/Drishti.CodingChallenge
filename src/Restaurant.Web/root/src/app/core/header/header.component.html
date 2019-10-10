@@ -1,0 +1,11 @@
+  <header class="header warrp-header">
+  <div class="hdr-menu" fxLayout="row" fxLayoutWrap fxLayoutAlign="center center">
+    <mat-icon class="hdr-menu-button" (click)="menuClick($event)">menu</mat-icon>
+    <img class="logo" src="https://drishti.com/wp-content/uploads/2018/04/favicon-300x300.png" routerLink="/home">
+    <h2 class="hdr-title"><span class="separater">|</span> Restaurant </h2>
+    <ul fxLayout="row" class="links">
+      <li class="link" routerLink="/{{link.path}}" routerLinkActive="active" *ngFor="let link of links">{{link.text}}
+      </li>
+    </ul>
+  </div> 
+</header>

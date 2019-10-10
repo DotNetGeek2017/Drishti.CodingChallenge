@@ -1,0 +1,21 @@
+
+<div mat-dialog-content class="dialog-container dialog-{{type}}">
+    <h3 >{{title}}</h3>
+    <p class="dialog-message">{{ message }}</p>
+    <div [ngSwitch]="type">
+        <div mat-dialog-actions *ngSwitchCase="'confirmation'" fxLayout="row" fxLayoutGap="12px">
+            <button type="button" 
+                mat-raised-button color="primary"
+                (click)="dialogRef.close(type)">OK</button>
+            <button 
+                mat-raised-button color="secondary"
+                type="button"
+                (click)="dialogRef.close()">Cancel</button>
+        </div>
+        <div mat-dialog-actions *ngSwitchCase="'alert'">
+            <button type="button" mat-raised-button color="primary" 
+                (click)="dialogRef.close()">OK</button>
+        </div>
+    </div>   
+       
+</div>

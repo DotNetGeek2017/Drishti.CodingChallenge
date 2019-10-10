@@ -1,0 +1,42 @@
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+
+  &:before,
+  &:after {
+    height: 30px;
+    width: 30px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &:before {
+    opacity: 0.5;
+    background-image: url("/assets/spinner/circle.svg");
+  }
+
+  &:after {
+    background-image: url("/assets/spinner/gap.svg");
+    animation: spin 1s steps(8) infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

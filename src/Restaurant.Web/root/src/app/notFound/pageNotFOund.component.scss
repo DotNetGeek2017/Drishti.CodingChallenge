@@ -1,0 +1,18 @@
+.not-found {
+  display: flex;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  .not-found-text {
+    max-width: 200px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+
+    a {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

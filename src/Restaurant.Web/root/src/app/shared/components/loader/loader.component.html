@@ -1,0 +1,4 @@
+<div class="spinner-wrapper"  *ngIf="isLoading" [ngSwitch]="type">
+    <mat-spinner class="spinner" *ngSwitchCase="'spinner'"></mat-spinner>
+    <mat-progress-bar mode="indeterminate" *ngSwitchCase="'bar'"></mat-progress-bar>
+</div>

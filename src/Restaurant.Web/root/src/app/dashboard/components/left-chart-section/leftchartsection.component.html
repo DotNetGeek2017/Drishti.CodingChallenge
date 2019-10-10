@@ -1,0 +1,12 @@
+<div class="left-charts-container">
+    <div class="dishes-chart-container" fxLayout="column">
+        <div fxLayout="row">
+            <div id="left">Duration<br/>{{aggregatedData.totalDuration}} </div>
+            <div id="center">Average Duration<br/>{{aggregatedData.averageDuration}}</div>
+            <div id="right">Total Count<br/>{{aggregatedData.totalItems}}</div>
+        </div>
+        <charts-section id="dishes" [labels]="dishesLabels()" [labelsData]="dishesValues()"></charts-section>
+        <charts-section id="actions" [labels]="actionLabels()" [labelsData]="actionValues()"></charts-section>
+        <charts-section id="stations" [labels]="stationLabels()" [labelsData]="stationValues()"></charts-section>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+@import "_variables";
+.tile-submenu {
+  padding-left: 8px;
+}
+
+.tile-title {
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px 0;
+  color: #fff;
+}
+
+.tile-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.tile-submenu .tile-title {
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+.tile-title a.router-link-active {
+  color: $tesla-blue30;
+}

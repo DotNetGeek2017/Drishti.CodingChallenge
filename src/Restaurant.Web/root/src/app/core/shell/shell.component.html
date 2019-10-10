@@ -1,0 +1,9 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav class="sidenav" (close)="navStatus = 'close'">
+        <app-menu-list (navToggle)="navToggle($event)" [navStatus]="navStatus"></app-menu-list>
+    </mat-sidenav>
+    <app-header (navOpen)="sidenav.open()"></app-header>
+    <div class="main-content" [@routeAnimations]="outlet.isActivated ? outlet.activatedRoute : ''">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+</mat-sidenav-container>

@@ -1,0 +1,18 @@
+<div class="action-teaser-container">
+    <div fxLayout="row" fxLayoutGap="18px">
+        <div class="circle" style="vertical-align:middle" id="block_container">{{getFirstLetter(action.userAction) |titlecase}}</div>
+        <div fxLayout="row" fxLayoutGap="18px" id="block_container">
+            <div fxLayout="column">
+                <div class="columncontainer">{{action.userAction | titlecase}}</div>
+                <div fxLayout="row" class="columncontainer">
+                    <div><i class="fa fa-snowflake-o columncontainer"></i>{{action.dish}}</div>
+                    <div><i class="fa fa-map-marker columncontainer"></i>{{action.station}}</div>
+                </div>
+                <div fxLayout="row" class="columncontainer">
+                    <div><i class="fa fa-clock-o columncontainer"></i>{{action.duration}}</div>
+                    <div><i class="fa fa-calendar columncontainer"></i>{{action.startDateTime}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

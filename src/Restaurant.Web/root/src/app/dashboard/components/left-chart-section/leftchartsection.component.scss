@@ -1,0 +1,17 @@
+.left-charts-container{
+    #left {
+        float:left;
+        text-align:center;
+    }
+    
+    #center {
+        display: inline-block;
+        margin:0 auto;
+        text-align:center;
+    }
+    
+    #right {
+        float:right;
+        text-align:center;
+    }
+}

@@ -1,0 +1,380 @@
+@import "variables";
+@import "_mixins";
+
+body,
+html {
+  height: 100%;
+  font-family: gotham book;
+  color: #171a20;
+}
+
+.main-content {
+  background: #fff;
+}
+
+h1 {
+  font: 40px gotham;
+  line-height: 48px;
+}
+
+h2 {
+  font: 28px gotham;
+  line-height: 36px;
+}
+
+h3 {
+  font: 20px gotham;
+  line-height: 28px;
+}
+
+h4 {
+  font: 14px gotham;
+  line-height: 24px;
+}
+
+h5 {
+  font: 12px gotham;
+  line-break: 20px;
+}
+
+h6 {
+  font: 10px gotham;
+  line-height: 16px;
+}
+
+p,
+span,
+li,
+td {
+  font-size: 14px;
+  font-family: gotham book;
+  margin: 0;
+}
+
+small {
+  font-size: 12px;
+}
+
+.black {
+  color: #171a20;
+}
+
+.dark-grey {
+  color: #393c41;
+}
+
+.grey {
+  color: #5c5e62;
+}
+
+.tesla-md button.mat-raised-button {
+  .mat-button-wrapper {
+    font: 10px gotham medium;
+  }
+
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid $tesla-black;
+  border-style: outset;
+  padding: 0 32px;
+  border-radius: 20px;
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px $tesla-white;
+  }
+}
+
+.tesla-md button.mat-raised-button[size="large"] {
+  .mat-button-wrapper {
+    font: 12px gotham medium;
+  }
+
+  height: 42px;
+  min-width: 214px;
+  padding: 0 42px;
+  border-radius: 20px;
+}
+
+.tesla-md button.mat-raised-button[size="medium"] {
+  .mat-button-wrapper {
+    font: 9px gotham medium;
+  }
+
+  border-radius: 20px;
+  padding: 0 32px;
+  height: 32px;
+}
+
+.tesla-md button.mat-raised-button[size="small"] {
+  .mat-button-wrapper {
+    font: 9px gotham medium;
+  }
+
+  border-radius: 20px;
+  padding: 0 24px;
+  height: 28px;
+}
+
+.tesla-md button.mat-raised-button[color="blue"] {
+  background: $tesla-blue30;
+  border: 2px solid $tesla-blue30;
+
+  .mat-button-wrapper {
+    color: $tesla-white;
+  }
+
+  &:hover {
+    background: $tesla-blue20;
+  }
+}
+.tesla-md button.mat-raised-button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border: 0;
+  &:hover {
+    background: currentColor !important;
+  }
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.tesla-md button.mat-raised-button[color="primary"] {
+  background: $tesla-black;
+
+  &:hover {
+    background: $tesla-black;
+  }
+}
+
+.tesla-md button.mat-raised-button[color="secondary"] {
+  background: $tesla-white;
+
+  &:hover,
+  &:focus {
+    background: $tesla-black;
+
+    .mat-button-wrapper {
+      color: $tesla-white;
+    }
+  }
+}
+
+.mat-dialog-container {
+  min-width: 500px;
+}
+
+.tesla-md tesla-grid {
+  table.tg-table {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+  }
+
+  thead {
+    th {
+      font: 13px gotham;
+      text-transform: initial;
+      white-space: nowrap;
+      color: $tesla-black;
+      padding: 16px 8px;
+    }
+  }
+
+  tbody {
+    tr {
+      margin-top: 2px;
+    }
+
+    td {
+      min-width: 100px;
+      font: 12px gotham book;
+      color: $tesla-grey20;
+      border: 0;
+      background: $tesla-grey60;
+      padding: 8px 8px;
+      div,
+      span,
+      input {
+        font-size: 12px;
+      }
+    }
+  }
+  .tg-pagination {
+    border-top: 0;
+    user-select: none;
+  }
+}
+
+.tesla-md tesla-grid.row-click {
+  tbody {
+    tr {
+      cursor: pointer;
+
+      &:hover {
+        td {
+          background: $tesla-grey50;
+        }
+      }
+    }
+  }
+}
+
+.mat-tooltip {
+  font: 14px gotham book;
+  color: $tesla-white;
+  background: $tesla-grey20;
+}
+
+input,
+.input,
+.tesla-md .mat-input-element {
+  caret-color: $tesla-black;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 34px;
+  background: transparent;
+  padding: 8px 16px;
+  font: 14px gotham book;
+  border: 1px solid #d0d1d2;
+
+  &:focus {
+    border: 1px solid $tesla-black;
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 5px;
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: 5px;
+  }
+
+  @include transition();
+}
+
+.input[disabled],
+.tesla-md .mat-input-element[disabled] {
+  cursor: not-allowed;
+}
+
+.input-label {
+  color: $tesla-grey40;
+  margin-bottom: 8px;
+  font: 14px gotham book;
+}
+
+.tg-link.tg-link-active {
+  background: $tesla-blue30 !important;
+}
+
+.mat-datepicker-toggle-active {
+  color: $tesla-blue30;
+}
+
+.mat-calendar-body-cell-content.mat-calendar-body-selected {
+  background: $tesla-blue30;
+}
+
+.tesla-md .mat-select-trigger {
+  height: 34px;
+  border-radius: 20px;
+  border: 1px solid #d0d1d2;
+
+  @include transition();
+  &:hover {
+    border-color: $tesla-black;
+  }
+}
+.mat-select-disabled {
+  .mat-select-trigger {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    &:hover {
+      border-color: #d0d1d2;
+    }
+  }
+}
+
+.tesla-md .mat-select:focus:not(.mat-select-disabled) .mat-select-trigger,
+.tesla-md .mat-select:focus:not(.mat-select-disabled) .mat-select-arrow,
+.tesla-md .mat-option.mat-selected {
+  color: $tesla-blue30;
+}
+
+.tesla-md .mat-select-value {
+  max-width: initial;
+  min-width: 120px;
+}
+
+mat-slide-toggle {
+  min-width: 50px;
+  .mat-slide-toggle-thumb {
+    box-shadow: none;
+  }
+  .mat-slide-toggle-thumb-container {
+    top: 2px;
+    left: 2px;
+  }
+  .mat-slide-toggle-bar {
+    width: 100%;
+    height: 100%;
+    background: $tesla-grey40;
+    border-radius: 20px;
+  }
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container {
+  transform: translate3d(26px, 0, 0) !important;
+  .mat-slide-toggle-thumb {
+    background: $tesla-white;
+  }
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background: $tesla-blue30;
+}
+
+select {
+  font: 14px gotham book;
+  padding: 4px 12px;
+  border: 1px solid $tesla-grey20;
+  border-radius: 3px;
+}
+
+.tesla-md .mat-checkbox-checkmark-path {
+  stroke: $tesla-blue30 !important;
+}
+
+.tesla-md .mat-checkbox-background,
+.tesla-md .mat-checkbox-frame {
+  border: 2px solid $tesla-blue30;
+}
+.tesla-md .mat-menu-panel {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.mat-simple-snackbar-action {
+  color: $tesla-white;
+}
+
+.tesla-md .mat-select-placeholder {
+  transform: none !important;
+  margin-left: 0;
+  font: 14px gotham book;
+  text-transform: initial;
+  padding-bottom: 0;
+}

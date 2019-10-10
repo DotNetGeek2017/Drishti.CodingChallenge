@@ -1,0 +1,17 @@
+@import "_variables";
+@import "_mixins";
+footer {
+  background: $tesla-black;
+  padding: 18px 0;
+  span {
+    color: $tesla-white;
+    cursor: pointer;
+    @include transition();
+    &:hover {
+      color: $tesla-grey50;
+    }
+  }
+  small {
+    color: $tesla-white;
+  }
+}

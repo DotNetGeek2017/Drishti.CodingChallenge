@@ -1,0 +1,5 @@
+<div class="search-field">
+    <i *ngIf="!inputValue"><mat-icon>search</mat-icon></i>
+    <i *ngIf="inputValue" (click)="onFieldClearHandler()" class="icon-button"><mat-icon>close</mat-icon></i>
+    <input type="text" class="form-control" [placeholder]="placeholder" [(ngModel)]="inputValue">
+</div>

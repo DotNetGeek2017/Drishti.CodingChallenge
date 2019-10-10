@@ -1,0 +1,42 @@
+@import "_variables";
+
+.search-field {
+  position: relative;
+  input {
+    padding: 8px 20px 8px 5px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: normal;
+    width: 100%;
+  }
+  i {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -12px;
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    &.icon-button {
+      border-radius: 50%;
+      right: 5px;
+      margin-top: -11px;
+      width: 20px;
+      height: 20px;
+      background: #ccc;
+      text-align: center;
+      cursor: pointer;
+      .mat-icon {
+        color: #fff;
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  .mat-icon {
+    color: #ccc;
+  }
+}

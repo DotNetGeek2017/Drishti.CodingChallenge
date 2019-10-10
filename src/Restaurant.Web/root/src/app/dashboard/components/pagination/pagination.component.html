@@ -1,0 +1,10 @@
+<div class="pagination-container">
+    <div fxLayout="row">
+
+        <div id="left"><button mat-button [disabled]="pageIndex==1" (click)="previousClick()">
+                <&nbsp;Previous</button> </div> 
+        <div id="center"><button mat-button>{{totalCount>0?((pageIndex-1)*pageSize)+1:0}} to {{ofTotal()}} of
+                        {{totalCount}} </button></div>
+        <div id="right"><button mat-button [disabled]="!enableNextButton()"  (click)="nextClick();">Next&nbsp;></button></div>
+    </div>
+</div>

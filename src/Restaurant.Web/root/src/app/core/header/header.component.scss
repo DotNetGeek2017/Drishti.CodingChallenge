@@ -1,0 +1,174 @@
+@import "_variables";
+@import "_mixins";
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background:#6f7b94;
+  border-bottom: 0;
+}
+.warp-header-2 {
+  position: relative;
+}
+
+.separater {
+  margin-right: 10px;
+}
+
+.logo {
+  max-height: 34px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.warp-header-2 .hdr-menu-button.mat-icon {
+  margin-top: -7px;
+  color: $tesla-white;
+}
+.hdr-menu-button {
+  color: $tesla-white;
+}
+
+.hdr-notifications {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+
+.hdr-notifications-icon {
+  color: #ccc;
+}
+
+.hdr-notifications-count {
+  background: #ccc;
+  color: $tesla-grey;
+  line-height: 12px;
+  height: 14px;
+  border-radius: 3px;
+  padding: 0px 2px;
+  min-width: 18px;
+  text-align: center;
+  border: 1px #fff solid;
+  font-size: 11px;
+  display: inline-block;
+  font-style: normal;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.hdr-notifications.active .hdr-notifications-count {
+  background: $tesla-red;
+  color: #fff;
+  display: inline-block;
+}
+
+.hdr-notifications.active .hdr-notifications-icon {
+  color: $tesla-red;
+  margin-right: 10px;
+}
+
+.hdr-username {
+  line-height: 50px;
+  padding-right: 15px;
+  display: none;
+}
+.hdr-user-name {
+  color: $tesla-white;
+}
+
+.tesla-logo {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…AyLjYtMi42SDg1Yy4zIDEuMiAxLjMgMi40IDIuNyAyLjYiIGZpbGw9IiNGRkYiLz48L3N2Zz4=);
+}
+
+.hdr-menu {
+  padding-left: 15px;
+  height: 50px;
+  .mat-icon {
+    margin: 0;
+    height: auto;
+  }
+  .hdr-title {
+    font-family: gotham;
+    font-weight: initial;
+    color: $tesla-white;
+    font-size: 18px;
+    border-left: 0;
+    padding: 0;
+  }
+  .hdr-logo-icon {
+    width: 34px;
+    text-indent: 0;
+    background: none;
+    border-left: 1px #e4e4e4 solid;
+    padding-left: 10px;
+    margin: 0 10px;
+  }
+}
+.links {
+  margin-left: 30px;
+  align-self: stretch;
+  @include mq("tablet-wide", max) {
+    display: none !important;
+  }
+  .link {
+    font-family: gotham;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    color: $tesla-white;
+    @include transition();
+    &:hover {
+      color: $tesla-blue30;
+    }
+    &.active {
+      color: $tesla-blue30;
+      pointer-events: none;
+      border-bottom: 3px solid $tesla-blue30;
+    }
+  }
+}
+
+::ng-deep .notifications-menu .mat-menu-item {
+  height: auto;
+  white-space: normal;
+  line-height: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+::ng-deep .notifications-menu .notification-icon {
+  margin: 3px 10px 0 0;
+}
+
+::ng-deep .notifications-menu .notification-message p {
+  margin: 0;
+  padding: 0;
+}
+
+::ng-deep .notifications-menu .notification-message small {
+  color: $tesla-grey;
+}
+
+::ng-deep .header-menu {
+  .mat-menu-content {
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .warp-header-2 .hdr-title {
+    font-size: 21px;
+  }
+
+  .hdr-username {
+    display: inline-block;
+  }
+}
+.menu-button {
+  display: flex;
+}

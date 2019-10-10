@@ -1,0 +1,20 @@
+@import "_variables";
+
+:host::ng-deep {
+  .mat-sidenav-container {
+    color: $tesla-black;
+    background: white;
+    height: 100%;
+  }
+
+  .sidenav {
+    background: #111111;
+    color: #fff;
+    width: 240px;
+    padding: 20px;
+  }
+}
+
+.main-content {
+  min-height: 100%;
+}

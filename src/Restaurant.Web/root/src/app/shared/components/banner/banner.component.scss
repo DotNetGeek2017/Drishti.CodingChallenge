@@ -1,0 +1,55 @@
+@import "_variables";
+@mixin icon-color($normal-color, $hover-color) {
+  fill: $normal-color;
+  &:hover {
+    fill: $hover-color;
+  }
+}
+.tds-alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  height: 42px;
+  padding: 0 12px;
+  .close {
+    cursor: pointer;
+    transition: fill 0.2s;
+  }
+  ng-content {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.alert-yellow {
+  background-color: rgba(204, 127, 0, 0.05);
+  color: $color-warning;
+  .close {
+    @include icon-color($color-warning, rgba(204, 127, 0, 0.5));
+  }
+}
+
+.alert-red {
+  background-color: rgba(204, 0, 0, 0.1);
+  color: $tesla-red;
+  .close {
+    @include icon-color($tesla-red, rgba(204, 0, 0, 0.5));
+  }
+}
+
+.alert-blue {
+  background-color: rgba(62, 107, 226, 0.1);
+  color: $tesla-blue20;
+  .close {
+    @include icon-color($tesla-blue20, rgba(62, 107, 226, 0.5));
+  }
+}
+
+.alert-green {
+  background-color: rgba(89, 170, 0, 0.1);
+  color: $tesla-green;
+  .close {
+    @include icon-color($tesla-green, rgba(89, 170, 0, 0.5));
+  }
+}
